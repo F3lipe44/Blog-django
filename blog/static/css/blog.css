@@ -1,10 +1,10 @@
-h1 a, h2 a {
+h1 a,
+h2 a {
     color: #C25100;
     font-family: 'Lobster';
 }
 
 .page-header {
-    background-color: #C25100;
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
@@ -57,8 +57,8 @@ h4 {
     color: #000000;
 }
 
-.post > .date,
-.post > .actions {
+.post>.date,
+.post>.actions {
     float: right;
 }
 
@@ -72,4 +72,36 @@ h4 {
 .btn-secondary:hover {
     color: #FFFFFF;
     background-color: #C25100;
+}
+
+.center{
+    margin-left: 43%;
+    width: 100%;
+    padding: 10px;
+}
+
+.menu{
+    font-size: 32px;
+}
+
+body {
+    background: url("../blog/imgs/fondo.jpg") no-repeat;
+    background-size: 100%;
+}
+
+.content{
+    background-color: white;
+    text-align: center;
+}
+
+.bigger{
+    font-size: 21px;
+}
+
+.mt-1{
+    margin-top: 143px !important;
+}
+
+.principal{
+    height: 940px;
 }
