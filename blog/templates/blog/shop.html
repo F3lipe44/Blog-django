@@ -19,7 +19,7 @@
     </div>
     <div class="col-4">
         <a class="center bigger mb-5" href="/">
-            <img src="{% static 'blog/imgs/Group14.jpg' %}">
+            <img src="{% static 'blog/media/imgs/Group14.jpg' %}">
         </a>
     </div>
     <div class="col-4 mt-2">
@@ -46,26 +46,25 @@
 <body>
     <div class="container-xxl">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4 content principal">
+            <div class="col-2"></div>
+            <div class="col-8 content principal">
                 <div class="row">
-                    <div class="col-lg-6">
-                            <img src="{% static 'blog/imgs/zapatillas1.jpg' %}" width="200px" height="200px">
+                    <div class="col-lg">
                         {% block content %}
+                        {% if post.blog_image %}
+                        <img src="{{ post.blog_image.url }}">
+                        {% endif %}
                         {% for post in posts %}
                         <div class="post">
-                            <div class="date">
-                                {{ post.published_date }}
-                            </div>
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                            <p>{{ post.text|linebreaksbr }}</p>
+                            <p>{{ post.text| truncatewords:17 }}</p>
                         </div>
                         {% endfor %}
                         {% endblock %}
                     </div>
                 </div>
             </div>
-            <div class="col-4"></div>
+            <div class="col-2"></div>
         </div>
 
     </div>
